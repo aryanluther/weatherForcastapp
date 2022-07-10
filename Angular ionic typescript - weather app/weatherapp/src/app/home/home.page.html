@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Blank </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <div style="text-align: center">
+        <ion-title size="large">Live weather </ion-title>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <ion-card>
+      <ion-searchbar animated=""></ion-searchbar>
+    </ion-card>
+    <ion-card class="card">
+      <ion-item>
+        <p>Today's Date :</p>
+        <span slot="end"> {{toDate | date: 'EEEE, MMMM d, y'}}</span>
+      </ion-item>
+      <ion-item lines="none"
+        ><span style="font-size: 90px">
+          {{(temp.temp - 273.5).toFixed(0)}}
+        </span>
+        <span>o</span>
+        <img
+          slot="end"
+          class="weatherimgicon"
+          [src]="weatherIcon"
+          width="190"
+          height="190"
+        />
+      </ion-item>
+      <ion-item>
+        <ion-icon name="location"></ion-icon>
+        <span>{{cityName}}</span>
+      </ion-item>
+      <ion-item style="font-weight: bold"
+        ><span> {{weatherDetails.description}} </span>
+      </ion-item>
+    </ion-card>
+    <ion-card class="card">
+      <ion-item
+        >Minimum Temperature
+        <span slot="end">{{(temp.temp_min - 273.5).toFixed(0)}}</span></ion-item
+      >
+      <ion-item
+        >Maximum Temperature
+        <span slot="end">{{(temp.temp_max - 273.5).toFixed(0)}}</span></ion-item
+      >
+      <ion-item>Humidity <span slot="end">{{temp.humidity}}</span></ion-item>
+      <ion-item
+        >Feels Like<span slot="end"
+          >{{(temp.feels_like - 273.5).toFixed(0)}}</span
+        ></ion-item
+      >
+    </ion-card>
+  </div>
+</ion-content>
