@@ -2,7 +2,7 @@
 
 ## Start your ios app simulator ( you need to have swift installed on mac )
 
-open -a Simulator.app
+** open -a Simulator.app **
 
 ## Angular, Typescript 
 
