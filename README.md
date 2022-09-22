@@ -2,7 +2,7 @@
 
 ## Start your ios app simulator ( you need to have swift installed on mac )
 
-```ruby
+```terminal
    open -a Simulator.app
 ```
 
