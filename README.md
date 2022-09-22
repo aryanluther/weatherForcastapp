@@ -6,4 +6,4 @@ open -a Simulator.app
 
 # Angular, Typescript 
 
-# Open weather is being used to fetch data 
+## Open weather is being used to fetch data 
